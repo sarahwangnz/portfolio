@@ -28,62 +28,62 @@ export const HomePage = (props: any) => {
           <div className="v-page">
             <div className="v-projects-header">Projects</div>
             <Row>
-              <div style={{width:"55%"}}>
+              <Col sm={7}>
               <div id="p1" className="v-project" onClick={goSomewhere}>
-                  <Row>
-                    <Col sm={7}>
-                      <div className="v-project-title">
-                        Viridium
-                      </div>
-                    </Col>
-                    <Col sm={5}>
-                      <div className="v-project-tags">
-                        <div className="v-tag">Product Design</div>
-                        <div className="v-tag">Sustainability</div>
-                      </div>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col sm={9}>
-                      <span className="v-project-summary">
-                        Re-imagining the way companies understand and track their carbon emissions
-                      </span>
-                    </Col>
-                    <Col sm={3}>
-                    </Col>
-                  </Row>
-                </div>
+                <Row>
+                  <Col sm={7}>
+                    <div className="v-project-title">
+                      Viridium
+                    </div>
+                  </Col>
+                  <Col sm={5}>
+                    <div className="v-project-tags">
+                      <div className="v-tag">Product Design</div>
+                      <div className="v-tag">Sustainability</div>
+                    </div>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col sm={9}>
+                    <span className="v-project-summary">
+                      Re-imagining the way companies understand and track their carbon emissions
+                    </span>
+                  </Col>
+                  <Col sm={3}>
+                  </Col>
+                </Row>
               </div>
-              <div style={{width:"45%"}}>
-                <div id="viridium" className="v-project" onClick={goSomewhere}>
-                  <Row>
-                    <Col sm={7}>
-                      <div className="v-project-title">
-                        Viridium
-                      </div>
-                    </Col>
-                    <Col sm={5}>
-                      <div className="v-project-tags">
-                        <div className="v-tag">Product Design</div>
-                        <div className="v-tag">Sustainability</div>
-                      </div>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col sm={9}>
-                      <span className="v-project-summary">
-                        Re-imagining the way companies understand and track their carbon emissions
-                      </span>
-                    </Col>
-                    <Col sm={3}>
-                    </Col>
-                  </Row>
-                </div>
+              </Col>
+              <Col sm={5}>
+              <div id="viridium" className="v-project" onClick={goSomewhere}>
+                <Row>
+                  <Col sm={7}>
+                    <div className="v-project-title">
+                      Viridium
+                    </div>
+                  </Col>
+                  <Col sm={5}>
+                    <div className="v-project-tags">
+                      <div className="v-tag">Product Design</div>
+                      <div className="v-tag">Sustainability</div>
+                    </div>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col sm={9}>
+                    <span className="v-project-summary">
+                      Re-imagining the way companies understand and track their carbon emissions
+                    </span>
+                  </Col>
+                  <Col sm={3}>
+                  </Col>
+                </Row>
               </div>
+              </Col>
             </Row>
             <Row>
               <Col sm={5}>
-              <div id="p2" className="v-project" onClick={goSomewhere}>
+                <div id="p2" className="v-project" onClick={goSomewhere}>
                   <Row>
                     <Col sm={7}>
                       <div className="v-project-title">
@@ -109,7 +109,7 @@ export const HomePage = (props: any) => {
                 </div>
               </Col>
               <Col sm={7}>
-              <div id="p3" className="v-project" onClick={goSomewhere}>
+                <div id="p3" className="v-project" onClick={goSomewhere}>
                   <Row>
                     <Col sm={7}>
                       <div className="v-project-title">
