@@ -1,0 +1,29 @@
+.v-work-img {
+    width:80%;
+}
+
+.v-work-img-container {
+    padding: 2em;
+}
+
+.v-chapter-nav {
+    position: fixed;
+    z-index: 1000;
+    right: 10vw;
+    bottom: 6rem;
+    padding: 1em;
+}
+
+.v-project-item {
+    padding: 2em 3em;
+}
+
+.v-project-item span {
+    display: inline-block;
+    margin-bottom: 2em;
+}
+
+.v-project-item li {
+   list-style: none;
+   padding: 4px 1em;
+}

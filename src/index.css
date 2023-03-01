@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Garamond:regular,bold,italic&subset=latin,latin-ext');
+
+body {
+  margin: 0;
+  --sarah-body-bg: rgb(255, 255, 255);
+  --sarah-body-color: rgb(50, 50, 50);
+  --sarah-font-size: 16px;
+
+  font-family: 'Roboto', 'Helvetica', 'Times New Roman';
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  background-color: var(--sarah-body-bg);
+  color: var(--sarah-body-color);
+  font-size: var(--sarah-font-size);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

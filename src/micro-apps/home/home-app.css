@@ -1,0 +1,65 @@
+.home-app .headline-content {
+    font-family: Georgia, Times;
+    font-size: 4rem;
+    font-weight: 500;
+    color: rgb(50, 50, 50);
+    padding: 4px;
+    line-height: 4rem;
+    display: block;
+    position: absolute;
+    bottom: 45vh;
+}
+
+.home-app .blurb-content {
+    font-size: 1.3em;
+    position: absolute;
+    width: 70%;
+    text-align: left;
+    margin-left: 0.5rem;
+    bottom: 30vh;
+}
+
+.home-app .home-page {
+    padding: 1.5rem;
+}
+
+.home-app .v-container {
+    width: 75vw;
+    margin: 0px auto 0px auto; 
+    border: 0px solid red;
+}
+
+.home-app .v-summary {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin: 1.5em;
+}
+
+.home-app .v-header {
+    padding: 0.8em;
+    background: none;
+    font-weight: 700;
+}
+
+.home-app .v-body {
+    padding: 2em 0.2;
+    border: 1px solid red;
+}
+
+.home-app .v-title-1 {
+    color: black;
+    margin-right: 0.2em;
+}
+
+.home-app .v-title-2 {
+    color: black;
+}
+
+.divider {
+    height: 11em;
+}
+
+.home-app .text-box {
+    position: relative;
+    height: 90vh;
+}
