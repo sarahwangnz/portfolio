@@ -28,6 +28,10 @@
     color: white;
 }
 
+#viridium .v-project-summary {
+    margin-top: 7rem;
+}
+
 .v-tag {
     font-size: 1rem;
     padding: 4px;
@@ -53,13 +57,13 @@
     bottom: 10px;
 }
 
-#viridium {
-    background-color: #222C70;
+#p1 {
+    background-color: #88AD4D;
     color: white;
 }
 
-#p1 {
-    background-color: #495FF2;
+#viridium {
+    background-color: #278BB9;
     color: white;
 }
 
@@ -69,7 +73,7 @@
 }
 
 #p3 {
-    background-color: #9EBD6E;
+    background-color: #4254CA;
     color: white;
 }
 
@@ -77,6 +81,11 @@
     box-shadow: 1rem 0.5rem 2rem rgb(160, 160, 160);
 }
 
+.v-project-image {
+    margin-top: 2rem;
+    width: 120px;
+    transform: perspective(200px) rotate3D(1, 20, 2, -30deg);
+}
 
 
 

@@ -11,7 +11,7 @@ export const HomePage = (props: any) => {
       <div className="home-page">
         <div className="v-container">
           <Row className="v-page">
-            <Col sm={7}>
+            <Col id="home-title" sm={7}>
               <div className="text-box">
                 <span className="headline-content">
                   Hi! I'm Sarah,<br /> a UX/UI Designer from the Bay Area
@@ -21,7 +21,7 @@ export const HomePage = (props: any) => {
                 </span>
               </div>
             </Col>
-            <Col className="text-box" sm={5}>
+            <Col id="home-text" className="text-box" sm={5}>
               picture here later
             </Col>
           </Row>
@@ -33,20 +33,20 @@ export const HomePage = (props: any) => {
                 <Row>
                   <Col sm={7}>
                     <div className="v-project-title">
-                      Viridium
+                      WeddingWhisk
                     </div>
                   </Col>
                   <Col sm={5}>
                     <div className="v-project-tags">
+                      <div className="v-tag">Event Planning</div>
                       <div className="v-tag">Product Design</div>
-                      <div className="v-tag">Sustainability</div>
                     </div>
                   </Col>
                 </Row>
                 <Row>
                   <Col sm={9}>
                     <span className="v-project-summary">
-                      Re-imagining the way companies understand and track their carbon emissions
+                      Helping people organize all things food related for their wedding
                     </span>
                   </Col>
                   <Col sm={3}>
@@ -64,15 +64,14 @@ export const HomePage = (props: any) => {
                   </Col>
                   <Col sm={5}>
                     <div className="v-project-tags">
-                      <div className="v-tag">Product Design</div>
-                      <div className="v-tag">Sustainability</div>
+                      <img className="v-project-image" src="/portfolio/resources/viridiumhomepage.png" alt="abc" />
                     </div>
                   </Col>
                 </Row>
                 <Row>
                   <Col sm={9}>
                     <span className="v-project-summary">
-                      Re-imagining the way companies understand and track their carbon emissions
+                      Reimagining the way companies understand and track their carbon emissions
                     </span>
                   </Col>
                   <Col sm={3}>
@@ -87,20 +86,20 @@ export const HomePage = (props: any) => {
                   <Row>
                     <Col sm={7}>
                       <div className="v-project-title">
-                        Viridium
+                        Investify.ai
                       </div>
                     </Col>
                     <Col sm={5}>
                       <div className="v-project-tags">
+                        <div className="v-tag">Finance</div>
                         <div className="v-tag">Product Design</div>
-                        <div className="v-tag">Sustainability</div>
                       </div>
                     </Col>
                   </Row>
                   <Row>
                     <Col sm={9}>
                       <span className="v-project-summary">
-                        Re-imagining the way companies understand and track their carbon emissions
+                        Managing your finances on-the-go
                       </span>
                     </Col>
                     <Col sm={3}>
@@ -113,20 +112,20 @@ export const HomePage = (props: any) => {
                   <Row>
                     <Col sm={7}>
                       <div className="v-project-title">
-                        Wedding Catering App
+                        Digital Portfolio
                       </div>
                     </Col>
                     <Col sm={5}>
                       <div className="v-project-tags">
-                        <div className="v-tag">Product Design</div>
-                        <div className="v-tag">Sustainability</div>
+                        <div className="v-tag">Design</div>
+                        <div className="v-tag">Development</div>
                       </div>
                     </Col>
                   </Row>
                   <Row>
                     <Col sm={9}>
                       <span className="v-project-summary">
-                        Helping people decide on a wedding menu quickly & easily
+                        Behind the scenes of conceptualizing and creating this website
                       </span>
                     </Col>
                     <Col sm={3}>
