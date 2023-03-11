@@ -1,12 +1,12 @@
 
-import { LayoutPage } from '../../components/v-layout/v-layout'
+import { LayoutPage } from '../../../components/v-layout/v-layout'
 import { Row, Col } from 'react-bootstrap';
-import { homeApp } from './home-app';
-import { NavSlider } from '../../components/v-nav-slider/v-nav-slider';
+import { portfolioApp } from '../portfolio-app';
+import { NavSlider } from '../../../components/v-nav-slider/v-nav-slider';
 import { PureComponent } from 'react';
-import "./work.css";
+import "./viridium.css";
 
-export class Work extends PureComponent<any, { selected: string }> {
+export class Viridium extends PureComponent<any, { selected: string }> {
     manualScolling = false;
     constructor(props: any) {
         super(props);
@@ -16,6 +16,7 @@ export class Work extends PureComponent<any, { selected: string }> {
 
     componentDidMount(): void {
         //window.addEventListener("scroll", this.onScroll);
+        document.title="Viridium — Sarah Wang"
     }
     onChange = (value: string) => {
         let element = window;
@@ -66,8 +67,8 @@ export class Work extends PureComponent<any, { selected: string }> {
     }
     render = () => (
         <>
-            <LayoutPage microApp={homeApp} >
-                <div id="work-page" className="work-page">
+            <LayoutPage microApp={portfolioApp} pageName="viridium-page">
+                <div id="viridium-page">
                     <div className="v-container">
                         <Row>
                             <Col sm="7">
@@ -86,25 +87,25 @@ export class Work extends PureComponent<any, { selected: string }> {
                         <Row>
                             <Col sm="2" className="v-project-item">
                                 <span>Team</span>
-                                <ul>
-                                    <li>Solo UX Designer working with 2 stakeholders</li>
+                                <div>
+                                    <span>Solo UX Designer working with 2 stakeholders</span>
 
-                                </ul>
+                                </div>
                             </Col>
                             <Col sm="2" className="v-project-item">
                                 <span>Tools</span>
-                                <ul>
-                                    <li>Figma</li>
-                                    <li>UI/UX</li>
-                                    <li>User testing</li>
-                                </ul>
+                                <div>
+                                    <span>Figma</span>
+                                    <span>UX/UI</span>
+                                    <span>User testing</span>
+                                </div>
                             </Col >
                             <Col sm="2" className="v-project-item">
                                 <span>Duration</span>
-                                <ul>
-                                    <li>2 Months</li>
+                                <div>
+                                    <span>2 Months</span>
 
-                                </ul>
+                                </div>
                             </Col>
                             <Col sm="1">
                             </Col>
@@ -112,14 +113,14 @@ export class Work extends PureComponent<any, { selected: string }> {
                         <Row>
                             <Col sm="8" className="v-project-item">
                                 <h2>Problem</h2>
-                                <ul>
-                                    <li>
+                                <div>
+                                    <span>
                                     In the wake of climate change, large companies are responsible for over 50% of the world’s 
                                     greenhouse gas emissions. Many want to make changes but either don’t know how or where to start. 
                                     There’s too much data to analyze in order to generate an accurate carbon emissions report—even then, 
                                     the reports that are currently available are not easily understood or easy to act upon. 
-                                    </li>
-                                </ul>
+                                    </span>
+                                </div>
                             </Col>
                             <Col sm="4" >
 
@@ -128,14 +129,14 @@ export class Work extends PureComponent<any, { selected: string }> {
                         <Row>
                             <Col sm="8" className="v-project-item">
                                 <h2>Solution</h2>
-                                <ul>
-                                    <li>
+                                <div>
+                                    <span>
                                     Viridium aims to solve this problem by providing a platform where companies can easily 
                                     aggregate the necessary data needed in order to generate an accurate carbon emissions report. 
                                     It will also indicate specific areas in the supply chain where companies can simultaneously 
                                     cut costs as well as their overall greenhouse gas emissions. 
-                                    </li>
-                                </ul>
+                                    </span>
+                                </div>
                             </Col>
                             <Col sm="4" >
 
@@ -144,12 +145,12 @@ export class Work extends PureComponent<any, { selected: string }> {
                         <Row>
                             <Col sm="8" className="v-project-item">
                                 <h2>Ideation</h2>
-                                <ul>
-                                    <li>
+                                <div>
+                                    <span>
                                     Where are we going to collect data from and how are we going to present it in a way 
                                     that’s accurate and easy to understand?
-                                    </li>
-                                </ul>
+                                    </span>
+                                </div>
                             </Col>
                             <Col sm="4" >
 
@@ -158,16 +159,16 @@ export class Work extends PureComponent<any, { selected: string }> {
                         <Row>
                             <Col sm="8" className="v-project-item">
                                 <h2>Product</h2>
-                                <ul>
-                                    <li>
+                                <div>
+                                    <span>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                                         magna aliqua. Ut enim ad minim veniam, quis nostrud
                                         exercitation ullamco laboris nisi ut aliquip ex ea commodo c
                                         onsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                                         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                                         sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </li>
-                                </ul>
+                                    </span>
+                                </div>
                             </Col>
                             <Col sm="4" >
 
@@ -176,16 +177,16 @@ export class Work extends PureComponent<any, { selected: string }> {
                         <Row>
                             <Col sm="8" className="v-project-item">
                                 <h2>Outcome</h2>
-                                <ul>
-                                    <li>
+                                <div>
+                                    <span>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                                         magna aliqua. Ut enim ad minim veniam, quis nostrud
                                         exercitation ullamco laboris nisi ut aliquip ex ea commodo c
                                         onsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                                         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                                         sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </li>
-                                </ul>
+                                    </span>
+                                </div>
                             </Col>
                             <Col sm="4" >
 

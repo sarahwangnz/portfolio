@@ -1,0 +1,69 @@
+.viridium-page .v-work-img {
+    width:80%;
+}
+
+.viridium-page .v-work-img-container {
+    padding: 2em;
+}
+
+.viridium-page .v-chapter-nav {
+    position: fixed;
+    z-index: 1000;
+    right: 10vw;
+    bottom: 6rem;
+    padding: 1em;
+}
+
+.viridium-page .v-project-item {
+    padding: 2em 3em;
+}
+
+.viridium-page .v-project-item span {
+    display: inline-block;
+    margin-bottom: 2em;
+}
+
+.viridium-page .v-project-item li {
+   list-style: none;
+   padding: 4px 1em;
+}
+
+.v-work-img {
+    width:80%;
+}
+
+.v-work-img-container {
+    padding: 2em;
+}
+
+.v-chapter-nav {
+    position: fixed;
+    z-index: 1000;
+    right: 10vw;
+    bottom: 6rem;
+    padding: 1em;
+}
+
+#v-project-item-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+#v-project-item-title-color {
+    font-weight: 700;
+    color: #88AD4D;
+}
+
+.v-project-item li {
+   margin-left: 3rem;
+   list-style: none;
+}
+
+.project-bullet-list {
+    margin-top: 1rem;
+}
+
+.wedding-whisk-page .v-project-item li {
+    list-style: circle;
+
+}

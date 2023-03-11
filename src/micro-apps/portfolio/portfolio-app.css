@@ -1,0 +1,29 @@
+.todo-list {
+    color: red;
+    font-weight: bold;
+}
+
+.portfolio-app .v-container {
+    width: 75vw;
+    margin: 0px auto 0px auto; 
+    border: 0px solid red;
+}
+
+.portfolio-app .v-summary {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin: 1.5em;
+    border: 0px solid red;
+}
+
+.portfolio-app .v-header {
+    padding: 0.8em;
+    background: none;
+    font-weight: 700;
+}
+
+.portfolio-app .v-body {
+    padding: 2em 0.2;
+    border: 1px solid red;
+}
+

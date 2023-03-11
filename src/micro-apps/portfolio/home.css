@@ -1,0 +1,153 @@
+.home-page {
+    --v-micro-app-bg : rgb(255, 255, 255);
+    --v-micro-app-color: rgb(50, 50, 50)
+}
+
+.home-page .navbar {
+    position: fixed;
+    width: 100%;
+}
+
+.home-page .v-container {
+    padding-top: 7.5rem;
+    max-width: 1080px;
+}
+
+.home-page .text-box {
+    color: var(--v-micro-app-color);
+    animation-name: fade;
+    animation-duration: 3s;
+    padding-top: 8.5rem;
+    height: 90vh;
+}
+
+.home-page .headline-content {
+    font-family: Georgia, Times;
+    font-size: 4rem;
+    font-weight: 500;
+    padding: 4px;
+    line-height: 4.5rem;
+    display: block;
+    animation-name: fade;
+    animation-duration: 3s;
+    margin-bottom: 1.5rem;
+}
+
+.home-page .home-image {
+    width: 90%;
+    margin-top: 10rem;
+}
+
+@keyframes fade {
+    from {
+        color: var(--v-micro-app-bg);
+    }
+    to {
+        color: var(--v-micro-app-color);
+    }
+}
+
+.home-page .blurb-content {
+    font-size: 1.1rem;
+    width: 80%;
+    text-align: left;
+    margin-left: 0.5rem;
+}
+
+.home-page .v-projects-header {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    font-family: Georgia, Times;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.home-page .v-project {
+    height: 40vh;
+    background: rgb(236, 236, 236);
+    margin: 1.2rem 0.8rem;
+    padding: 1rem;
+    border-radius: 1em;
+}
+
+.home-page .v-project-title {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: white;
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.home-page .v-project-summary {
+    font-size: min(max(0.9rem,1.2vw), 1.3rem);
+    display: block;
+    margin-top: 6rem;
+    padding-left: 1.5rem;
+    color: white;
+}
+
+.home-page #wedding-whisk {
+    background-color: #88AD4D;
+    color: white;
+}
+
+.home-page #viridium {
+    background-color: #278BB9;
+    color: white;
+}
+
+.home-page #aimss {
+    background-color: #000F70;
+    color: white;
+}
+
+.home-page #digital-portfolio {
+    background-color: #4254CA;
+    color: white;
+}
+
+.home-page .v-project:hover {
+    box-shadow: 1rem 0.5rem 2rem rgb(160, 160, 160);
+}
+
+.home-page .v-project-image {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 7em;
+    transform: perspective(200px) rotate3D(1, 20, 2, -30deg);
+}
+
+@media only screen and (max-width: 1080px) {
+    body {
+      font-size: 0.8rem;
+    }
+    .home-page .v-project-image {
+        display: none;
+    }
+    .home-page .headline-content {
+        font-size: 3.5rem;
+    }
+  }
+  
+@media only screen and (max-width: 900px) {
+    .navbar {
+      --bs-navbar-padding-y: 24px;
+      --bs-navbar-padding-x: 24px;
+    }
+    .home-page .row div{
+        width: 100%;
+    }
+    .home-page .text-box {
+        height: 30vh;
+    }
+    .home-page .blurb-content {
+        display: none;
+    }
+    .home-page .headline-content {
+        font-size: 3rem;
+    }
+}
+  
+
+
+

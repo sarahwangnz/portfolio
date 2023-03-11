@@ -1,0 +1,66 @@
+.wedding-whisk-page .v-container{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.wedding-whisk-page .v-header {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.wedding-whisk-page .v-summary{
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-left: 2.3rem;
+    width: 60%;
+}
+
+.wedding-whisk-page .v-work-img {
+    width: 80%;
+}
+
+.wedding-whisk-page .v-work-img-container {
+    padding: 2rem;
+}
+
+.wedding-whisk-page #v-project-item-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.wedding-whisk-page #v-project-item-title-color {
+    font-weight: 700;
+    color: #88AD4D;
+}
+
+.wedding-whisk-page h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.wedding-whisk-page .v-project-item {
+    padding: 2rem 3rem;
+}
+
+.wedding-whisk-page .v-project-item li {
+   list-style: circle;
+   padding: 3px 0.1rem;
+   margin-left: 3rem;
+}
+
+.wedding-whisk-page .project-bullet-list {
+    margin-top: 1rem;
+}
+
+.wedding-whisk-page .v-chapter-nav {
+    position: fixed;
+    z-index: 1000;
+    right: 10vw;
+    bottom: 6rem;
+    padding: 1rem;
+}
+
+.wedding-whisk-page .bottom-space {
+    width: 100%;
+    height: 10rem;
+}

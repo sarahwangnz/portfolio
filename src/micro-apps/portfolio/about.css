@@ -1,0 +1,101 @@
+.about-page {
+    color: rgb(50, 50, 50);
+}
+
+.about-page .v-header {
+    margin-left: 0.5rem;
+    padding-top: 3rem;
+}
+
+.about-page .v-summary {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+.about-page .v-fun-facts {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.2rem 1.2rem;
+}
+
+.about-page .v-fun-facts span {
+    border: 1px solid rgb(50, 50, 50);
+    margin: 0.2rem;
+    padding: 0.5rem 0.7rem;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.about-page .v-path-img {
+    width: 70%;
+    margin: 3rem auto;
+}
+
+.about-page .v-img-container {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.about-page .v-header-skills {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0.5rem 0.5rem;
+    padding: 1rem 0rem 0rem 1.8rem;
+} 
+
+.about-page .v-skills {
+    font-size: 1.1rem;
+}
+
+.about-page .v-skills li {
+    list-style: none;
+    padding: 2px 1rem;
+    margin-left: 1rem;
+}
+
+.about-page #about-contact .v-link {
+    margin: 0.5rem 0.5rem;
+    padding: 1.2rem 0rem 0rem 1.8rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    color: rgb(50, 50, 50);
+}
+
+.about-page #about-contact .v-link a{
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+}
+
+.about-page .about-items {
+    border-bottom: 1px solid rgb(50, 50, 50);
+    padding-bottom: 1rem;
+}
+
+.about-page .p-italic {
+    font-style: italic;
+}
+
+.about-page #about-edu li{
+    margin-top: 0.2rem;
+    margin-bottom: 1.3rem;
+    margin-left: 1.3rem;
+}
+
+.about-page #about-professional li{
+    margin-top: 0.2rem;
+    margin-bottom: 1.3rem;
+    margin-left: 1.3rem;
+}
+
+.about-page .bottom-space {
+    width: 100%;
+    height: 15rem;
+}
+
+/* div[class*="col"], div[class*="row"]  {
+    border: 1px red solid;
+} */
