@@ -30,7 +30,7 @@
 
 .aimss-page #v-project-item-title-color {
     font-weight: 700;
-    color: #389CCE;
+    color: #6fafe8;
 }
 
 .aimss-page h2 {
@@ -51,15 +51,7 @@
 .aimss-page .project-bullet-list {
     margin-top: 1rem;
 }
-
-.aimss-page .v-chapter-nav {
-    position: fixed;
-    z-index: 1000;
-    right: 10vw;
-    bottom: 6rem;
-    padding: 1rem;
-}
-
+      
 .aimss-page .bottom-space {
     width: 100%;
     height: 10rem;

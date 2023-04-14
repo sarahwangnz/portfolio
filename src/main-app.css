@@ -2,7 +2,7 @@
   --bs-navbar-padding-y: 24px;
   --bs-navbar-padding-x: 72px;
   --bs-navbar-color: rgb(0, 0, 0);
-  --bs-navbar-hover-color: #96c94a;
+  --bs-navbar-hover-color: #80af3a;
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
   --bs-navbar-active-color: var(--sarah-body-color);
   --bs-navbar-brand-padding-y: 0.3125rem;
@@ -58,4 +58,29 @@
   width: 123px;
   border: 1px solid blue;
 }
+
+@media only screen and (max-width: 900px) {
+  .navbar {
+    --bs-navbar-padding-y: 24px;
+    --bs-navbar-padding-x: 24px;
+  }
+  .portfolio-app .row div{
+      width: 100%;
+  }
+  .portfolio-app .layout-header-end {
+    float: right;
+  }  
+  .portfolio-app .layout-header-end a:not(:last-child)::before {
+    height: 1.5rem;
+    position: absolute;
+    top: 20%;
+    right: -8%;
+    width: 0px;
+    background-color: var(--bs-navbar-brand-color);
+    content: "";
+  }
+}
+
+
+
 

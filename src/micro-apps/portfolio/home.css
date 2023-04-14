@@ -3,6 +3,13 @@
     --v-micro-app-color: rgb(50, 50, 50)
 }
 
+.home-page .v-page-body{
+    background: url("/public/resources/blue-paint-unsplash-crop.jpg");
+    background-size: 100%;
+    width: 100%;
+    background-repeat: repeat-y;
+}
+
 .home-page .navbar {
     position: fixed;
     width: 100%;
@@ -13,14 +20,6 @@
     max-width: 1080px;
 }
 
-.home-page .text-box {
-    color: var(--v-micro-app-color);
-    animation-name: fade;
-    animation-duration: 3s;
-    padding-top: 8.5rem;
-    height: 90vh;
-}
-
 .home-page .headline-content {
     font-family: Georgia, Times;
     font-size: 4rem;
@@ -28,23 +27,11 @@
     padding: 4px;
     line-height: 4.5rem;
     display: block;
-    animation-name: fade;
-    animation-duration: 3s;
     margin-bottom: 1.5rem;
 }
 
-.home-page .home-image {
-    width: 90%;
-    margin-top: 10rem;
-}
-
-@keyframes fade {
-    from {
-        color: var(--v-micro-app-bg);
-    }
-    to {
-        color: var(--v-micro-app-color);
-    }
+.home-page .headline-name {
+    color: #80AF3A;
 }
 
 .home-page .blurb-content {
@@ -54,12 +41,30 @@
     margin-left: 0.5rem;
 }
 
+.home-page .text-box {
+    color: var(--v-micro-app-color);
+    animation-name: headline-content-fade;
+    animation-duration: 3s;
+    padding-top: 10.5rem;
+    height: 90vh;
+}
+
+@keyframes headline-content-fade {
+    from {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .home-page .v-projects-header {
-    padding: 0.5rem;
-    padding-left: 1rem;
     font-family: Georgia, Times;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 500;
+    padding-left: 1rem;
+    padding: 0.5rem;
 }
 
 .home-page .v-project {
@@ -81,7 +86,7 @@
 .home-page .v-project-summary {
     font-size: min(max(0.9rem,1.2vw), 1.3rem);
     display: block;
-    margin-top: 6rem;
+    margin-top: 8rem;
     padding-left: 1.5rem;
     color: white;
 }
@@ -110,11 +115,11 @@
     box-shadow: 1rem 0.5rem 2rem rgb(160, 160, 160);
 }
 
-.home-page .v-project-image {
-    margin-top: 2rem;
-    margin-left: 1rem;
-    width: 7em;
-    transform: perspective(200px) rotate3D(1, 20, 2, -30deg);
+.home-page .home-icon {
+    font-size: 3rem;
+    float: right;
+    margin-right: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -138,7 +143,7 @@
         width: 100%;
     }
     .home-page .text-box {
-        height: 30vh;
+        height: 70vh;
     }
     .home-page .blurb-content {
         display: none;

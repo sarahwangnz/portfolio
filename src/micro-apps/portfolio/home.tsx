@@ -3,6 +3,9 @@ import { LayoutPage } from '../../components/v-layout/v-layout';
 import { portfolioApp } from './portfolio-app';
 import "./home.css";
 import { PureComponent } from 'react';
+import { FaRegLightbulb, FaSeedling } from 'react-icons/fa';
+import { IoMdMedical } from 'react-icons/io';
+import { GiForkKnifeSpoon } from 'react-icons/gi';
 
 export class HomePage extends PureComponent {
   goToProject = (event: any) => {
@@ -29,7 +32,7 @@ export class HomePage extends PureComponent {
           <Col id="home-title" sm={7}>
             <div className="text-box">
               <div className="headline-content">
-                Hi! I'm Sarah,<br /> a UX/UI Designer
+                Hi! I'm <span className="headline-name">Sarah,</span><br /> a UX/UI Designer
               </div>
               <div className="blurb-content">
                 A California enthusiast and a retired swimmer, I enjoy working on diverse projects
@@ -39,7 +42,7 @@ export class HomePage extends PureComponent {
             </div>
           </Col>
           <Col id="home-text" className="image-box" sm={5}>
-            <img src="./resources/pebbles.png" alt="pebbles" className="home-image" />
+          
           </Col>
         </Row>
         <div className="v-page">
@@ -54,7 +57,7 @@ export class HomePage extends PureComponent {
                     </div>
                   </Col>
                   <Col sm={5}>
-                    <img className="v-project-image" src="/portfolio/resources/viridiumhomepage.png" alt="abc" />
+                    <GiForkKnifeSpoon className="home-icon"/>
                   </Col>
                 </Row>
                 <Row>
@@ -77,7 +80,7 @@ export class HomePage extends PureComponent {
                     </div>
                   </Col>
                   <Col sm={5}>
-                    <img className="v-project-image" src="/portfolio/resources/viridiumhomepage.png" alt="abc" />
+                    <FaSeedling className="home-icon"/>
                   </Col>
                 </Row>
                 <Row>
@@ -100,13 +103,13 @@ export class HomePage extends PureComponent {
                     </div>
                   </Col>
                   <Col sm={5}>
-                    <img className="v-project-image" src="/portfolio/resources/viridiumhomepage.png" alt="abc" />
+                    <IoMdMedical className="home-icon"/>
                   </Col>
                 </Row>
                 <Row>
                   <Col sm={9}>
                     <div className="v-project-summary">
-                      Streamlining EMS intervention time with an AI-based Mobile Stroke Scale
+                      Reducing EMS intervention time with an AI-based Mobile Stroke Scale
                     </div>
                   </Col>
                   <Col sm={3}>
@@ -123,7 +126,7 @@ export class HomePage extends PureComponent {
                     </div>
                   </Col>
                   <Col sm={5}>
-                    <img className="v-project-image" src="/portfolio/resources/viridiumhomepage.png" alt="abc" />
+                    <FaRegLightbulb className="home-icon"/>
                   </Col>
                 </Row>
                 <Row>
@@ -141,9 +144,6 @@ export class HomePage extends PureComponent {
         </div>
         <Row className="divider"><Col> </Col></Row>
         <ul className='todo-list'>
-          <li>
-            Better pictures
-          </li>
           <li>
             Better animation on hover
           </li>

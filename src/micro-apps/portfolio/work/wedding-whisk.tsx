@@ -1,71 +1,40 @@
 
 import { LayoutPage } from '../../../components/v-layout/v-layout'
 import { Row, Col } from 'react-bootstrap';
-import { NavSlider } from '../../../components/v-nav-slider/v-nav-slider';
-import { PureComponent } from 'react';
 import "./wedding-whisk.css";
 import { portfolioApp } from '../portfolio-app';
+import { Project } from './project';
 
-export class WeddingWhisk extends PureComponent<any, { selected: string }> {
-    manualScolling = false;
-    constructor(props: any) {
-        super(props);
-        this.state = { selected: "Background" };
-        //
+export class WeddingWhisk extends Project {
+    getOptions () {
+        return [
+            {
+                value: "Background", label: "Background"
+            },
+            {
+                value: "Problem", label: "Problem"
+            },
+            {
+                value: "Solution", label: "Solution"
+            },
+            {
+                value: "Research", label: "Research"
+            },
+            {
+                value: "Ideation", label: "Ideation"
+            },
+            {
+                value: "Product", label: "Product"
+            },
+            {
+                value: "Outcome", label: "Outcome"
+            },
+        ]
     }
-
-    componentDidMount(): void {
-        //window.addEventListener("scroll", this.onScroll);
-        document.title="WeddingWhisk — Sarah Wang"
+    getTitle() {
+        return "Wedding Whisk — Sarah Wang";
     }
-    onChange = (value: string) => {
-        let element = window;
-        let top = 0;
-        switch (value) {
-            case 'Background':
-                top = 200;
-                break;
-            case 'Problem':
-                top = 400;
-                break;
-            case 'Product':
-                top = 600;
-                break;
-            case 'Conclusion':
-                top = 800;
-                break;
-        }
-        this.setState({ selected: value });
-        this.manualScolling = true;
-        element.scrollTo({
-            top: top,
-            left: 0,
-            behavior: 'smooth'
-        });
-        setTimeout(() => {
-            this.manualScolling = false;
-        }, 500);
-    }
-    onScroll = (evt: any) => {
-        if (this.manualScolling) {
-            return;
-        }
-        console.log(evt);
-        let top = evt.target.scrollTop;
-        if (top >= 200 && top < 400) {
-            this.setState({ selected: "Problem" });
-
-        } else if (top >= 400 && top < 600) {
-            this.setState({ selected: "Solution" });
-        } else if (top >= 600 && top < 800) {
-            this.setState({ selected: "Ideation" });
-        } else if (top >= 800) {
-            this.setState({ selected: "Product" });
-        } else if (top >= 1000) {
-            this.setState({ selected: "Outcome" });
-        }
-    }
-    render = () => (
+    renderContent = () => (
         <>
             <LayoutPage microApp={portfolioApp} pageName="wedding-whisk-page">
                 <div id="work-page" className="work-page">
@@ -112,7 +81,7 @@ export class WeddingWhisk extends PureComponent<any, { selected: string }> {
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Background</h2>
+                                <h2 id="Background">Background</h2>
                                 <div>
                                     <p className="v-paragraph">
                                         This app is a project I created while taking Google’s UX Design Certificate.
@@ -132,7 +101,7 @@ export class WeddingWhisk extends PureComponent<any, { selected: string }> {
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Problem</h2>
+                                <h2 id="Problem">Problem</h2>
                                 <div>
                                     <p> After interviewing friends who recently got married in 
                                         places that fit the bill, there were three main themes:
@@ -164,7 +133,7 @@ export class WeddingWhisk extends PureComponent<any, { selected: string }> {
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Solution</h2>
+                                <h2 id="Solution">Solution</h2>
                                 <p>
                                     I designed an app where couples can find, choose, and book catering vendors in once place.
                                     They can also simultaneously track their guests’ meal choices and note specific dietary requests.
@@ -176,7 +145,7 @@ export class WeddingWhisk extends PureComponent<any, { selected: string }> {
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Research</h2>
+                                <h2 id="Research">Research</h2>
                                 <p>
                                     The wedding planning market already has a number of great applications that offer more well-rounded 
                                     services, but there was still room for an app that just focused on getting the food right. (I'm looking
@@ -196,7 +165,7 @@ export class WeddingWhisk extends PureComponent<any, { selected: string }> {
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Ideation</h2>
+                                <h2 id="Ideation">Ideation</h2>
                                 <p>
                                     How might we build a collaborative platform that <span style={{color:"#88AD4D"}}>effectively organizes 
                                     catering vendor options</span> and <span style={{color:"#88AD4D"}}>creates smoother 
@@ -215,7 +184,7 @@ export class WeddingWhisk extends PureComponent<any, { selected: string }> {
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Product</h2>
+                                <h2 id="Product">Product</h2>
                                 <div id="v-project-item-title"> Final Prototype:
                                 
                                 <div className="todo-list">TODO: Sarah Figma by 6th of March</div></div>
@@ -225,7 +194,7 @@ export class WeddingWhisk extends PureComponent<any, { selected: string }> {
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Outcome</h2>
+                                <h2 id="Outcome">Outcome</h2>
                                 <p>
                                     As this was a fictional project with no real stakes, it was a great learning experience
                                     to go through the 5 step design process sequentially. If I was designing this app under limited time and 
@@ -241,27 +210,6 @@ export class WeddingWhisk extends PureComponent<any, { selected: string }> {
                     </div>
                 </div>
             </LayoutPage>
-            <NavSlider onChange={this.onChange} value={this.state.selected} id="chapters" className="v-chapter-nav" options={[
-                {
-                    value: "Challenge", label: "Challenge"
-                },
-                {
-                    value: "Problem", label: "Problem"
-                },
-                {
-                    value: "Solution", label: "Solution"
-                },
-                {
-                    value: "Ideation", label: "Ideation"
-                },
-                {
-                    value: "Product", label: "Product"
-                },
-                {
-                    value: "Outcome", label: "Outcome"
-                },
-            ]} />
         </>
-
     )
 }

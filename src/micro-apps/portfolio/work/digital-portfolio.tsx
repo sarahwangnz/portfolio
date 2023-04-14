@@ -2,70 +2,30 @@
 import { LayoutPage } from '../../../components/v-layout/v-layout'
 import { Row, Col } from 'react-bootstrap';
 import { portfolioApp } from '../portfolio-app';
-import { NavSlider } from '../../../components/v-nav-slider/v-nav-slider';
-import { PureComponent } from 'react';
 import "./digital-portfolio.css";
+import { Project } from './project';
 
-export class DigitalPortfolio extends PureComponent<any, { selected: string }> {
-    manualScolling = false;
-    constructor(props: any) {
-        super(props);
-        this.state = { selected: "Background" };
-        //
+export class DigitalPortfolio extends Project {
+    getOptions () {
+        return [
+            {
+                value: "Concept", label: "Concept"
+            },
+            {
+                value: "Design", label: "Design"
+            },
+            {
+                value: "Code", label: "Code"
+            },
+            {
+                value: "Takeaways", label: "Takeaways"
+            },
+        ]
     }
-
-    componentDidMount(): void {
-        document.title = "Digital Portfolio — Sarah Wang"
-        //window.addEventListener("scroll", this.onScroll);
+    getTitle() {
+        return "Digital Portfolio — Sarah Wang";
     }
-    onChange = (value: string) => {
-        let element = window;
-        let top = 0;
-        switch (value) {
-            case 'Background':
-                top = 200;
-                break;
-            case 'Problem':
-                top = 400;
-                break;
-            case 'Product':
-                top = 600;
-                break;
-            case 'Conclusion':
-                top = 800;
-                break;
-        }
-        this.setState({ selected: value });
-        this.manualScolling = true;
-        element.scrollTo({
-            top: top,
-            left: 0,
-            behavior: 'smooth'
-        });
-        setTimeout(() => {
-            this.manualScolling = false;
-        }, 500);
-    }
-    onScroll = (evt: any) => {
-        if (this.manualScolling) {
-            return;
-        }
-        console.log(evt);
-        let top = evt.target.scrollTop;
-        if (top >= 200 && top < 400) {
-            this.setState({ selected: "Problem" });
-
-        } else if (top >= 400 && top < 600) {
-            this.setState({ selected: "Solution" });
-        } else if (top >= 600 && top < 800) {
-            this.setState({ selected: "Ideation" });
-        } else if (top >= 800) {
-            this.setState({ selected: "Product" });
-        } else if (top >= 1000) {
-            this.setState({ selected: "Outcome" });
-        }
-    }
-    render = () => (
+    renderContent = () => (
         <>
             <LayoutPage microApp={portfolioApp} pageName="digital-portfolio-page">
                 <div id="digital-portfolio-page">
@@ -75,7 +35,7 @@ export class DigitalPortfolio extends PureComponent<any, { selected: string }> {
                                 <div className="v-header">
                                     Digital Portfolio
                                 </div>
-                                <div className="v-summary">My learning process through the creation, design,
+                                <div className="v-summary">Documenting my learning process through the creation, design,
                                     and development of this website.
                                 </div>
                             </Col>
@@ -104,7 +64,7 @@ export class DigitalPortfolio extends PureComponent<any, { selected: string }> {
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>The Concept</h2>
+                                <h2 id="Concept">The Concept</h2>
                                 <div>
                                     <p>I've always wanted to create my own website, but never had a reason to until I was trying to figure
                                         out a way to present my UX projects together in one place. The initial step was to see what was
@@ -112,7 +72,7 @@ export class DigitalPortfolio extends PureComponent<any, { selected: string }> {
                                     </p>
                                     <p>After looking at a multitude of great digital portfolios, I took concepts and styles that I liked
                                         from each one and meshed them together to form the design of my own page. (Yes, shamelessly copy
-                                        from the internet).
+                                        from the internet.)
                                     </p>
                                     <p>As for the color palette, it was inspired by the vibrant nature of Northern California.
                                     </p>
@@ -124,7 +84,7 @@ export class DigitalPortfolio extends PureComponent<any, { selected: string }> {
                         </Col>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>The Design</h2>
+                                <h2 id="Design">The Design</h2>
                                 <div>
                                     <p>Now that the initial design was sketched out on paper, I transferred the wireframes to
                                         Figma and played around with the design there. After a few iterations and a lot of
@@ -141,7 +101,7 @@ export class DigitalPortfolio extends PureComponent<any, { selected: string }> {
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>The Code</h2>
+                                <h2 id="Code">The Code</h2>
                                 <div>
                                     <p>
                                         The real kicker was learning how to transfer the design I had in my head into reality.
@@ -179,28 +139,29 @@ export class DigitalPortfolio extends PureComponent<any, { selected: string }> {
                                 </ul>
                             </Col>
                         </Row>
+                        <Row>
+                            <Col sm="8" className="v-project-item">
+                                <h2 id="Takeaways">The Takeaways</h2>
+                                <div>
+                                    <p>
+                                        Google is your best friend. So is copying things from the internet. I know what
+                                        you're thinking—isn't design supposed to be original? Yes, it is, but I made the 
+                                        mistake at the beginning thinking I needed to reinvent the wheel. We're here to 
+                                        use existing wheels to create something new that fits our needs. Throughout this 
+                                        process, I learned that you have to understand the fundamentals of design before 
+                                        you can break the rules in your own designs. As for coding, I started with the 
+                                        misconception that you had to write everything on your own, from scratch.
+                                        (I couldn't have been more wrong.) Similar to design, there are tons of libraries,
+                                        frameworks, and code already written to help you—all you have to do is know how to 
+                                        search for what you want, copy it, and integrate it into your own project. 
+                                    </p>
+                                </div>
+                            </Col>
+                        </Row>
                         <div className="bottom-space"></div>
                     </div>
                 </div>
             </LayoutPage >
-            <NavSlider onChange={this.onChange} value={this.state.selected} id="chapters" className="v-chapter-nav" options={[
-                {
-                    value: "Problem", label: "Problem"
-                },
-                {
-                    value: "Solution", label: "Solution"
-                },
-                {
-                    value: "Ideation", label: "Ideation"
-                },
-                {
-                    value: "Product", label: "Product"
-                },
-                {
-                    value: "Outcome", label: "Outcome"
-                },
-            ]} />
         </>
-
     )
 }

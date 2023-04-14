@@ -1,9 +1,55 @@
+.viridium-page .v-container{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.viridium-page .v-header {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.viridium-page .v-summary{
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-left: 2.3rem;
+    width: 60%;
+}
+
 .viridium-page .v-work-img {
-    width:80%;
+    width: 80%;
 }
 
 .viridium-page .v-work-img-container {
-    padding: 2em;
+    padding: 2rem;
+}
+
+.viridium-page #v-project-item-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.viridium-page #v-project-item-title-color {
+    font-weight: 700;
+    color: #389CCE;
+}
+
+.viridium-page h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.viridium-page .v-project-item {
+    padding: 2rem 3rem;
+}
+
+.viridium-page .v-project-item li {
+   list-style: circle;
+   padding: 3px 0.1rem;
+   margin-left: 3rem;
+}
+
+.viridium-page .project-bullet-list {
+    margin-top: 1rem;
 }
 
 .viridium-page .v-chapter-nav {
@@ -11,59 +57,10 @@
     z-index: 1000;
     right: 10vw;
     bottom: 6rem;
-    padding: 1em;
+    padding: 1rem;
 }
 
-.viridium-page .v-project-item {
-    padding: 2em 3em;
-}
-
-.viridium-page .v-project-item span {
-    display: inline-block;
-    margin-bottom: 2em;
-}
-
-.viridium-page .v-project-item li {
-   list-style: none;
-   padding: 4px 1em;
-}
-
-.v-work-img {
-    width:80%;
-}
-
-.v-work-img-container {
-    padding: 2em;
-}
-
-.v-chapter-nav {
-    position: fixed;
-    z-index: 1000;
-    right: 10vw;
-    bottom: 6rem;
-    padding: 1em;
-}
-
-#v-project-item-title {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-#v-project-item-title-color {
-    font-weight: 700;
-    color: #88AD4D;
-}
-
-.v-project-item li {
-   margin-left: 3rem;
-   list-style: none;
-}
-
-.project-bullet-list {
-    margin-top: 1rem;
-}
-
-.wedding-whisk-page .v-project-item li {
-    list-style: circle;
-
+.viridium-page .bottom-space {
+    width: 100%;
+    height: 10rem;
 }

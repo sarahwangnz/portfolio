@@ -2,70 +2,36 @@
 import { LayoutPage } from '../../../components/v-layout/v-layout'
 import { Row, Col } from 'react-bootstrap';
 import { portfolioApp } from '../portfolio-app';
-import { NavSlider } from '../../../components/v-nav-slider/v-nav-slider';
-import { PureComponent } from 'react';
 import "./viridium.css";
+import { Project } from './project';
 
-export class Viridium extends PureComponent<any, { selected: string }> {
-    manualScolling = false;
-    constructor(props: any) {
-        super(props);
-        this.state = { selected: "Background" };
-        //
+export class Viridium extends Project {
+    getOptions() {
+        return [
+            {
+                value: "Problem", label: "Problem"
+            },
+            {
+                value: "Solution", label: "Solution"
+            },
+            {
+                value: "Market", label: "Market"
+            },
+            {
+                value: "Brainstorm", label: "Brainstorm"
+            },
+            {
+                value: "Product", label: "Product"
+            },
+            {
+                value: "Reflection", label: "Reflection"
+            },
+        ]
     }
-
-    componentDidMount(): void {
-        //window.addEventListener("scroll", this.onScroll);
-        document.title="Viridium — Sarah Wang"
+    getTitle() {
+        return "Viridium — Sarah Wang";
     }
-    onChange = (value: string) => {
-        let element = window;
-        let top = 0;
-        switch (value) {
-            case 'Background':
-                top = 200;
-                break;
-            case 'Problem':
-                top = 400;
-                break;
-            case 'Product':
-                top = 600;
-                break;
-            case 'Conclusion':
-                top = 800;
-                break;
-        }
-        this.setState({ selected: value });
-        this.manualScolling = true;
-        element.scrollTo({
-            top: top,
-            left: 0,
-            behavior: 'smooth'
-        });
-        setTimeout(() => {
-            this.manualScolling = false;
-        }, 500);
-    }
-    onScroll = (evt: any) => {
-        if (this.manualScolling) {
-            return;
-        }
-        console.log(evt);
-        let top = evt.target.scrollTop;
-        if (top >= 200 && top < 400) {
-            this.setState({ selected: "Problem" });
-
-        } else if (top >= 400 && top < 600) {
-            this.setState({ selected: "Solution" });
-        } else if (top >= 600 && top < 800) {
-            this.setState({ selected: "Ideation" });
-        } else if (top >= 800) {
-            this.setState({ selected: "Product" });
-        } else if (top >= 1000) {
-        this.setState({ selected: "Outcome" });
-        }
-    }
-    render = () => (
+    renderContent = () => (
         <>
             <LayoutPage microApp={portfolioApp} pageName="viridium-page">
                 <div id="viridium-page">
@@ -75,9 +41,9 @@ export class Viridium extends PureComponent<any, { selected: string }> {
                                 <div className="v-header">
                                     Viridium
                                 </div>
-                                <div className="v-summary">Viridium is an environmental data cloud platform that 
-                                creates personalized carbon reports to help companies better understand and reduce 
-                                their environmental impact.
+                                <div className="v-summary">An environmental data cloud platform that
+                                    creates personalized carbon reports to help companies better understand and reduce
+                                    their environmental impact.
                                 </div>
                             </Col>
                             <Col sm="5" className="v-work-img-container">
@@ -85,26 +51,24 @@ export class Viridium extends PureComponent<any, { selected: string }> {
                             </Col>
                         </Row>
                         <Row>
-                            <Col sm="2" className="v-project-item">
-                                <span>Team</span>
+                            <Col sm="3" className="v-project-item">
+                                <div id="v-project-item-title">Team</div>
                                 <div>
-                                    <span>Solo UX Designer working with 2 stakeholders</span>
-
+                                    <div>UX Designer working with 3 stakeholders</div>
+                                </div>
+                            </Col>
+                            <Col sm="3" className="v-project-item">
+                                <div id="v-project-item-title">Tools</div>
+                                <div>
+                                    <div>Figma</div>
+                                    <div>UX/UI on web</div>
+                                    <div>User flows</div>
                                 </div>
                             </Col>
                             <Col sm="2" className="v-project-item">
-                                <span>Tools</span>
+                                <div id="v-project-item-title">Duration</div>
                                 <div>
-                                    <span>Figma</span>
-                                    <span>UX/UI</span>
-                                    <span>User testing</span>
-                                </div>
-                            </Col >
-                            <Col sm="2" className="v-project-item">
-                                <span>Duration</span>
-                                <div>
-                                    <span>2 Months</span>
-
+                                    <div>3 months</div>
                                 </div>
                             </Col>
                             <Col sm="1">
@@ -112,107 +76,132 @@ export class Viridium extends PureComponent<any, { selected: string }> {
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Problem</h2>
+                                <h2 id="Problem">Problem</h2>
                                 <div>
-                                    <span>
-                                    In the wake of climate change, large companies are responsible for over 50% of the world’s 
-                                    greenhouse gas emissions. Many want to make changes but either don’t know how or where to start. 
-                                    There’s too much data to analyze in order to generate an accurate carbon emissions report—even then, 
-                                    the reports that are currently available are not easily understood or easy to act upon. 
-                                    </span>
+                                    <div>
+                                        In the wake of climate change, large companies are responsible for over 50% of the world’s
+                                        greenhouse gas emissions. Many want to make changes but either don’t know how or where to start.
+                                        There’s too much data to analyze in order to generate an accurate carbon emissions report—even then,
+                                        the reports that are currently available are not easily understood to be actionable.
+                                    </div>
                                 </div>
                             </Col>
-                            <Col sm="4" >
-
+                            <Col sm="4">
                             </Col>
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Solution</h2>
+                                <h2 id="Solution">Solution</h2>
                                 <div>
-                                    <span>
-                                    Viridium aims to solve this problem by providing a platform where companies can easily 
-                                    aggregate the necessary data needed in order to generate an accurate carbon emissions report. 
-                                    It will also indicate specific areas in the supply chain where companies can simultaneously 
-                                    cut costs as well as their overall greenhouse gas emissions. 
-                                    </span>
+                                    <div>
+                                        Viridium aims to solve this problem by providing a platform where companies can easily
+                                        aggregate the necessary data needed in order to generate an accurate carbon emissions report.
+                                        By narrowing our scope to manufacturing, we are able to distill a complex carbon data report
+                                        into a more manageable one that companies can understand and take immediate action on.
+                                    </div>
                                 </div>
                             </Col>
-                            <Col sm="4" >
-
+                            <Col sm="4">
                             </Col>
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Ideation</h2>
+                                <h2 id="Market">Market Opportunity</h2>
                                 <div>
-                                    <span>
-                                    Where are we going to collect data from and how are we going to present it in a way 
-                                    that’s accurate and easy to understand?
-                                    </span>
+                                    <p>
+                                        Out of the many companies that are tackling climate change and bringing innovative solutions
+                                        to the table, we needed to choose an area to target. Manufacturing alone is responsible for
+                                        over 70% of the 40 gigatons of carbon dioxide emitted into the atmosphere yearly. Therefore,
+                                        we chose to focus on process manufacturing. Our goal is to reduce the overall amount of water and
+                                        waste that is produced while helping companies exceed regulation standards.
+                                    </p>
+                                    <div>
+                                        <ul>
+                                            <li><span style={{ color: "#389CCE" }}>Target Users: </span>Potential Enterprise Customers (~5,000-7,000)</li>
+                                            <li><span style={{ color: "#389CCE" }}>Target Area: </span>Airports</li>
+                                            <li><span style={{ color: "#389CCE" }}>$10 billion </span>Global Carbon Management Software Market (2021)</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </Col>
-                            <Col sm="4" >
-
+                            <Col sm="4">
                             </Col>
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Product</h2>
+                                <h2 id="Brainstorm">Brainstorm</h2>
                                 <div>
-                                    <span>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo c
-                                        onsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                        sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </span>
+                                    <div id="v-project-item-title-color">01</div>
+                                    <div id="v-project-item-title">Concepts</div>
+                                    <p>
+                                        There are certain perceptions of "green" companies—color usage is extremely important in order to
+                                        convey the right message.
+                                    </p>
+                                    <div id="v-project-item-title-color">02</div>
+                                    <div id="v-project-item-title">Themes</div>
+                                    <p>
+                                        Viridian is a greenish-blue pigment primarily made up of green. Both the color and Viridium
+                                        take inspiration from viridis, which is Latin for green. Following a 60/30/10 ratio, an off-white
+                                        and lighter green will be the primary body colors, a darker green will be the secondary color for copy,
+                                        followed by neutral blue and grey colors for accents.
+                                    </p>
+                                    <div id="v-project-item-title-color">03</div>
+                                    <div id="v-project-item-title">User Flow</div>
+                                    <p>
+                                        Guide the user through manually inputting data while cross-referencing with industry standards.
+                                        Home dashboard should clearly show insights from the data and possible next steps. Could potentially
+                                        include some sort of "game" or interactive aspect to motivate the user to complete actionable recommendations.
+                                    </p>
                                 </div>
                             </Col>
-                            <Col sm="4" >
-
+                            <Col sm="4">
                             </Col>
                         </Row>
                         <Row>
                             <Col sm="8" className="v-project-item">
-                                <h2>Outcome</h2>
+                                <h2 id="Product">Product</h2>
                                 <div>
-                                    <span>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo c
-                                        onsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                        sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </span>
+                                    <div>
+                                        <div>User Account:</div>
+                                        <ul>
+                                            <li>After completing the initial onboarding, the user will be directed to 
+                                                a personalized dashboard to help visualize key information</li>
+                                            <li>View data breakdowns for water, carbon, and waste (icons will turn 
+                                                orange/dark grey/red colors to signal negative overall health)</li>
+                                            <li>View insights summary in quick view, user can choose to explore full 
+                                                insights information further </li>
+                                            <li>Easily see critical action items & delegate tasks to team members </li>
+                                        </ul> 
+                                    </div>
                                 </div>
                             </Col>
-                            <Col sm="4" >
-
+                            <Col sm="4">
                             </Col>
                         </Row>
+                        <Row>
+                            <Col sm="8" className="v-project-item">
+                                <h2 id="Reflection">Reflection</h2>
+                                <div>
+                                    <div>
+                                        <p>
+                                            As a new start-up, Viridium is still in its early stages of development.
+                                            Our next goal is to better understand the exact type and amount of data we will be
+                                            dealing with so we can further refine our designs.
+                                        </p>
+                                        <p>
+                                            Sadly, I cannot reveal more details as Viridium is in stealth mode at the moment.
+                                            Please email me if you want to talk about this project more in depth!
+                                        </p>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col sm="4">
+                            </Col>
+                        </Row>
+                        <div className="bottom-space"></div>
                     </div>
                 </div>
             </LayoutPage>
-            <NavSlider onChange={this.onChange} value={this.state.selected} id="chapters" className="v-chapter-nav" options={[
-                    {
-                        value: "Problem", label: "Problem"
-                    },
-                    {
-                        value: "Solution", label: "Solution"
-                    },
-                    {
-                        value: "Ideation", label: "Ideation"
-                    },
-                    {
-                        value: "Product", label: "Product"
-                    },
-                    {
-                        value: "Outcome", label: "Outcome"
-                    },
-                ]} />
         </>
-
     )
 }
