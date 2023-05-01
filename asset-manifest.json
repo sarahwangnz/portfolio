@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.fc4f4faf.css",
-    "main.js": "/portfolio/static/js/main.878825df.js",
+    "main.css": "/portfolio/static/css/main.0dcb23f8.css",
+    "main.js": "/portfolio/static/js/main.e0b5468b.js",
     "static/media/blue-paint-unsplash-crop.jpg": "/portfolio/static/media/blue-paint-unsplash-crop.c597e92e7e7810a332eb.jpg",
     "index.html": "/portfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.fc4f4faf.css",
-    "static/js/main.878825df.js"
+    "static/css/main.0dcb23f8.css",
+    "static/js/main.e0b5468b.js"
   ]
 }
