@@ -6,7 +6,7 @@ import { portfolioApp } from '../portfolio-app';
 import { Project } from './project';
 
 export class WeddingWhisk extends Project {
-    getOptions () {
+    getOptions() {
         return [
             {
                 value: "Background", label: "Background"
@@ -49,10 +49,9 @@ export class WeddingWhisk extends Project {
                                     vendors for a smoother wedding experience.
                                 </div>
                             </Col>
-                            <Col sm="4" className="v-work-img-container">
+                            {/* <Col sm="4" className="v-work-img-container">
                                 <img className="v-work-img" src="./resources/viridium.png" alt="Test" />
-                                <div className="todo-list">Sarah to figma the picture here</div>
-                            </Col>
+                            </Col> */}
                         </Row>
                         <Row>
                             <Col sm="8">
@@ -103,7 +102,7 @@ export class WeddingWhisk extends Project {
                             <Col sm="8" className="v-project-item">
                                 <h2 id="Problem">Problem</h2>
                                 <div>
-                                    <p> After interviewing friends who recently got married in 
+                                    <p> After interviewing friends who recently got married in
                                         places that fit the bill, there were three main themes:
                                     </p>
                                     <Row>
@@ -147,17 +146,17 @@ export class WeddingWhisk extends Project {
                             <Col sm="8" className="v-project-item">
                                 <h2 id="Research">Research</h2>
                                 <p>
-                                    The wedding planning market already has a number of great applications that offer more well-rounded 
+                                    The wedding planning market already has a number of great applications that offer more well-rounded
                                     services, but there was still room for an app that just focused on getting the food right. (I'm looking
                                     at you, fellow food minded people.)
                                 </p>
                                 <div>I learned that wedding venues usually provide one of the following catering services:</div>
-                                    <ul className="project-bullet-list">
-                                        <li>In-house catering. Venues offer their own catering services, which usually includes
-                                            a range of options (e.g. plated dinners, food stations)</li>
-                                        <li>Preferred vendors. Venues have a list of catering vendors that
-                                            they have worked with before and vetted</li>
-                                    </ul>
+                                <ul className="project-bullet-list">
+                                    <li>In-house catering. Venues offer their own catering services, which usually includes
+                                        a range of options (e.g. plated dinners, food stations)</li>
+                                    <li>Preferred vendors. Venues have a list of catering vendors that
+                                        they have worked with before and vetted</li>
+                                </ul>
                                 <div>This app targets couples who are planning to get married at the second type of venue.</div>
                             </Col>
                             <Col sm="4" >
@@ -167,10 +166,9 @@ export class WeddingWhisk extends Project {
                             <Col sm="8" className="v-project-item">
                                 <h2 id="Ideation">Ideation</h2>
                                 <p>
-                                    How might we build a collaborative platform that <span style={{color:"#88AD4D"}}>effectively organizes 
-                                    catering vendor options</span> and <span style={{color:"#88AD4D"}}>creates smoother 
-                                    communication</span> between the couple, the guests, and the vendors?
-                                    {/* make the color font weight more */}
+                                    How might we build a collaborative platform that <span style={{ color: "#88AD4D" }}>effectively organizes
+                                        catering vendor options</span> and <span style={{ color: "#88AD4D" }}>creates smoother
+                                            communication</span> between the couple, the guests, and the vendors?
                                 </p>
                                 <ul>
                                     <li>Save favorite vendors & have a chat feature to send them messages</li>
@@ -185,11 +183,10 @@ export class WeddingWhisk extends Project {
                         <Row>
                             <Col sm="8" className="v-project-item">
                                 <h2 id="Product">Product</h2>
-                                <div id="v-project-item-title"> Final Prototype:
-                                
-                                <div className="todo-list">TODO: Sarah Figma by 6th of March</div></div>
+                                <div id="v-project-item-title"> Final Prototype: </div>
                             </Col>
-                            <Col sm="4">
+                            <Col sm="10" className="v-work-img-container">
+                                <img className="v-work-img" src="./resources/aimss-flowchart.png" alt="WeddingWhisk Prototype" />
                             </Col>
                         </Row>
                         <Row>
@@ -197,9 +194,9 @@ export class WeddingWhisk extends Project {
                                 <h2 id="Outcome">Outcome</h2>
                                 <p>
                                     As this was a fictional project with no real stakes, it was a great learning experience
-                                    to go through the 5 step design process sequentially. If I was designing this app under limited time and 
-                                    budget constraints, I would focus more on research in order to better understand the different aspects and situations 
-                                    users struggle with during wedding planning. Expanding from wedding planning to also include event planning could 
+                                    to go through the 5 step design process sequentially. If I was designing this app under limited time and
+                                    budget constraints, I would focus more on research in order to better understand the different aspects and situations
+                                    users struggle with during wedding planning. Expanding from wedding planning to also include event planning could
                                     be a potential way to increase user retention if this app were to become a real life application in the future.
                                 </p>
                             </Col>

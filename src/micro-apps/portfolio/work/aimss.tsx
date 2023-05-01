@@ -5,7 +5,7 @@ import "./aimss.css";
 import { Project } from './project';
 
 export class Aimss extends Project {
-    getOptions () {
+    getOptions() {
         return [
             {
                 value: "Problem", label: "Problem"
@@ -41,9 +41,9 @@ export class Aimss extends Project {
                                 together to reduce intervention time—and thus save more lives.
                             </div>
                         </Col>
-                        <Col sm="5" className="v-work-img-container">
+                        {/* <Col sm="5" className="v-work-img-container">
                             <img className="v-work-img" src="./resources/viridium.png" alt="Test" />
-                        </Col>
+                        </Col> */}
                     </Row>
                     <Row>
                         <Col sm="3" className="v-project-item">
@@ -132,13 +132,34 @@ export class Aimss extends Project {
                             <h2 id="Prototyping">From Idea to Reality</h2>
                             <div>
                                 <div>
-                                    How can we <span style={{ color: "#6fafe8" }}>identify </span>and
-                                    <span style={{ color: "#6fafe8" }}> classify </span>stroke symptoms so EMT's can
-                                    easily select relevant information to send to the hospital?
+                                    How can we accurately<span style={{ color: "#6fafe8" }}> identify </span>and
+                                    <span style={{ color: "#6fafe8" }}> classify </span>stroke symptoms so EMS personnel can
+                                    <span style={{ color: "#6fafe8" }}> easily evaluate</span> stroke patients and send necessary information
+                                    to hospitals <span style={{ color: "#6fafe8" }}> ahead of time? </span>
                                 </div>
                             </div>
                         </Col>
-                        <Col sm="4">
+                        <Col sm="10" className="v-work-img-container">
+                            <img className="v-work-img" src="./resources/aimss-flowchart.png" alt="AIMSS user flow" />
+                        </Col>
+                        <Col sm="10" className="v-work-img-container">
+                            <img className="v-work-img" src="./resources/aimss-prototype.png" alt="AIMSS prototype" />
+                        </Col>
+                        <Col sm="8" className="v-project-item">
+                            <div>
+                                <div>Identify & Calculate:</div>
+                                <ul>
+                                    <li>EMS starts with the first step of the scale:
+                                        taking a picture of the patient's face</li>
+                                    <li>Stroke Scale is calculated once all steps are completed</li>
+                                </ul>
+                                <div>Communicate:</div>
+                                <ul>
+                                    <li>Automatically filters best hospital choices depending on
+                                        Stroke Scale result</li>
+                                    <li>Contacts & shares patient info with hospital</li>
+                                </ul>
+                            </div>
                         </Col>
                     </Row>
                     <Row>

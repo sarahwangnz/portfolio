@@ -52,7 +52,7 @@ export class About extends PureComponent<any, { selected: string }> {
                                     </p>
                                     <p> 
                                         In my free time, you can find me taking my dog on walks and trying to become a runner.
-                                        (Emphasis on trying. I’m running a 12k in May and praying I don’t get wheeled out on a stretcher.)
+                                        (Emphasis on trying. I’m running a 12k soon and praying I don’t get wheeled out on a stretcher.)
                                     </p>
                                 </div>
                                 <div className="v-fun-facts">

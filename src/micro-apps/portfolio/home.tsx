@@ -142,12 +142,7 @@ export class HomePage extends PureComponent {
             </Col>
           </Row>
         </div>
-        <Row className="divider"><Col> </Col></Row>
-        <ul className='todo-list'>
-          <li>
-            Better animation on hover
-          </li>
-        </ul>
+        <div className="bottom-space"></div>
       </div>
     </LayoutPage>
   );

@@ -46,9 +46,9 @@ export class Viridium extends Project {
                                     their environmental impact.
                                 </div>
                             </Col>
-                            <Col sm="5" className="v-work-img-container">
+                            {/* <Col sm="5" className="v-work-img-container">
                                 <img className="v-work-img" src="./resources/viridium.png" alt="Test" />
-                            </Col>
+                            </Col> */}
                         </Row>
                         <Row>
                             <Col sm="3" className="v-project-item">
@@ -162,20 +162,21 @@ export class Viridium extends Project {
                                 <h2 id="Product">Product</h2>
                                 <div>
                                     <div>
-                                        <div>User Account:</div>
+                                        <div>Dashboard:</div>
                                         <ul>
-                                            <li>After completing the initial onboarding, the user will be directed to 
+                                            <li>After completing the initial onboarding, the user will be directed to
                                                 a personalized dashboard to help visualize key information</li>
-                                            <li>View data breakdowns for water, carbon, and waste (icons will turn 
+                                            <li>View data breakdowns for water, carbon, and waste (icons will turn
                                                 orange/dark grey/red colors to signal negative overall health)</li>
-                                            <li>View insights summary in quick view, user can choose to explore full 
+                                            <li>View insights summary in quick view, user can choose to explore full
                                                 insights information further </li>
                                             <li>Easily see critical action items & delegate tasks to team members </li>
-                                        </ul> 
+                                        </ul>
                                     </div>
                                 </div>
                             </Col>
-                            <Col sm="4">
+                            <Col sm="10" className="v-work-img-container">
+                                <img className="v-work-img" src="./resources/viridium-prototype.png" alt="Viridium Prototype" />
                             </Col>
                         </Row>
                         <Row>
@@ -189,8 +190,8 @@ export class Viridium extends Project {
                                             dealing with so we can further refine our designs.
                                         </p>
                                         <p>
-                                            Sadly, I cannot reveal more details as Viridium is in stealth mode at the moment.
-                                            Please email me if you want to talk about this project more in depth!
+                                            I would love to talk more about Viridium, but we are currently in stealth mode.
+                                            Please email me if you would like to discuss this project more in depth!
                                         </p>
                                     </div>
                                 </div>

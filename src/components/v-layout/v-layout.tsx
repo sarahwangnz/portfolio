@@ -236,9 +236,9 @@ export const LayoutPage = (props: { microApp: IMicroApp, children: any, header?:
                         <div className={'v-page-body'}>
                             {main}
                         </div>
-                        <LayoutFooter>
+                        {/* <LayoutFooter>
                             {footer === undefined ? "" : footer}
-                        </LayoutFooter>
+                        </LayoutFooter> */}
                     </div>
                 </div>
             </div>

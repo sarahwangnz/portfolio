@@ -21,7 +21,7 @@ class PortfolioApp extends MicroApp {
 
   public getRouteItems = () => {
     return [
-      new RouteItem().init("Work", "About", "2", "/wedding-whisk"),
+      new RouteItem().init("Work", "About", "2", "/"),
       new RouteItem().init("About", "About", "2", "/about"),
       new RouteItem().init("Blog", "About", "2", "/blog"),
     ];

@@ -53,7 +53,7 @@ export class Project extends PureComponent<any, { selected: string }> {
         }
         let notFound = true;
         this.getOptions().reverse().forEach((opt)=>{
-            let top = this.getTop(opt.value);
+            let top = this.getTop(opt.value) - 30;
             if (notFound && top - window.scrollY < 500) {
                 this.setState({ selected: opt.value });
                 notFound = false;
