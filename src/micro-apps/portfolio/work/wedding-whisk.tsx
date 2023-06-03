@@ -183,10 +183,10 @@ export class WeddingWhisk extends Project {
                         <Row>
                             <Col sm="8" className="v-project-item">
                                 <h2 id="Product">Product</h2>
-                                <div id="v-project-item-title"> Final Prototype: </div>
+                                {/* <div id="v-project-item-title"> Final Prototype: </div> */}
                             </Col>
                             <Col sm="10" className="v-work-img-container">
-                                <img className="v-work-img" src="./resources/aimss-flowchart.png" alt="WeddingWhisk Prototype" />
+                                <img className="v-work-img" src="./resources/wedding-whisk-prototype.png" alt="WeddingWhisk prototype" />
                             </Col>
                         </Row>
                         <Row>

@@ -3,7 +3,7 @@ import { LayoutPage } from '../../components/v-layout/v-layout';
 import { portfolioApp } from './portfolio-app';
 import "./home.css";
 import { PureComponent } from 'react';
-import { FaRegLightbulb, FaSeedling } from 'react-icons/fa';
+import { FaChevronDown, FaRegLightbulb, FaSeedling } from 'react-icons/fa';
 import { IoMdMedical } from 'react-icons/io';
 import { GiForkKnifeSpoon } from 'react-icons/gi';
 
@@ -24,6 +24,21 @@ export class HomePage extends PureComponent {
     if (nav.style.opacity < 0.1) {
       nav.style.opacity = 0;
     }
+    let chevron = document.getElementById("chevron-down") as any;
+    if (window.scrollY < 100) {
+      chevron.style.visibility = "visible";
+    } else {
+      chevron.style.visibility = "hidden";
+    }
+  }
+  viewMore = (event: any) => {
+    let nav = document.getElementById("projects") as any;
+    let rect = nav.getBoundingClientRect();
+    window.scrollTo({
+        top: rect.top,
+        left: 0,
+        behavior: 'smooth'
+    });
   }
   render = () => (
     <LayoutPage microApp={portfolioApp} pageName="home-page">
@@ -39,13 +54,15 @@ export class HomePage extends PureComponent {
                 that have a tangible impact on communities and drive positive change. I draw inspiration from the
                 vibrant natural world that surrounds us.
               </div>
+              <div className="home-view-more" id="chevron-down">
+                <FaChevronDown onClick={this.viewMore}/>
+              </div>
             </div>
           </Col>
           <Col id="home-text" className="image-box" sm={5}>
-          
           </Col>
         </Row>
-        <div className="v-page">
+        <div className="v-page" id="projects">
           <div className="v-projects-header">Projects</div>
           <Row>
             <Col sm={7}>
@@ -57,7 +74,7 @@ export class HomePage extends PureComponent {
                     </div>
                   </Col>
                   <Col sm={5}>
-                    <GiForkKnifeSpoon className="home-icon"/>
+                    <GiForkKnifeSpoon className="home-icon" />
                   </Col>
                 </Row>
                 <Row>
@@ -80,7 +97,7 @@ export class HomePage extends PureComponent {
                     </div>
                   </Col>
                   <Col sm={5}>
-                    <FaSeedling className="home-icon"/>
+                    <FaSeedling className="home-icon" />
                   </Col>
                 </Row>
                 <Row>
@@ -103,7 +120,7 @@ export class HomePage extends PureComponent {
                     </div>
                   </Col>
                   <Col sm={5}>
-                    <IoMdMedical className="home-icon"/>
+                    <IoMdMedical className="home-icon" />
                   </Col>
                 </Row>
                 <Row>
@@ -126,7 +143,7 @@ export class HomePage extends PureComponent {
                     </div>
                   </Col>
                   <Col sm={5}>
-                    <FaRegLightbulb className="home-icon"/>
+                    <FaRegLightbulb className="home-icon" />
                   </Col>
                 </Row>
                 <Row>

@@ -49,6 +49,31 @@
     height: 90vh;
 }
 
+.home-view-more {
+    position: fixed;
+    bottom: 1rem;
+    left: calc(50vw - 1.25rem);
+    font-size: 2.5rem;
+    opacity: 40%;
+    -webkit-animation: chevron-down 3s infinite ease-in-out;
+    -o-animation: chevron-down 3s infinite ease-in-out;
+    -ms-animation: chevron-down 3s infinite ease-in-out; 
+    -moz-animation: chevron-down 3s infinite ease-in-out; 
+    animation: chevron-down 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes chevron-down {
+    0% { transform: translateY(-5px)  }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(-5px) }
+}
+
+@keyframes chevron-down {
+    0% { transform: translateY(-5px)  }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(-5px) }
+}
+
 @keyframes headline-content-fade {
     from {
         opacity: 0;

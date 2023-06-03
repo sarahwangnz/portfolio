@@ -68,7 +68,7 @@ export class Viridium extends Project {
                             <Col sm="2" className="v-project-item">
                                 <div id="v-project-item-title">Duration</div>
                                 <div>
-                                    <div>3 months</div>
+                                    <div>Ongoing</div>
                                 </div>
                             </Col>
                             <Col sm="1">
@@ -176,7 +176,7 @@ export class Viridium extends Project {
                                 </div>
                             </Col>
                             <Col sm="10" className="v-work-img-container">
-                                <img className="v-work-img" src="./resources/viridium-prototype.png" alt="Viridium Prototype" />
+                                <img className="v-work-img" src="./resources/viridium-prototype.png" alt="Viridium prototype" />
                             </Col>
                         </Row>
                         <Row>
