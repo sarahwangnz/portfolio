@@ -13,6 +13,7 @@ export class Project extends PureComponent<any, { selected: string }> {
     componentDidMount(): void {
         window.addEventListener("scroll", this.onScroll);
         document.title = this.getTitle();
+        window.scrollTo(0, 0);
     }
     componentWillUnmount(): void {
         window.removeEventListener("scroll", this.onScroll);
