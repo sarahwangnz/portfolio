@@ -7,7 +7,6 @@
     background: url("/public/resources/blue-paint-unsplash-crop.jpg");
     background-size: 100%;
     width: 100%;
-    background-repeat: repeat-y;
 }
 
 .home-page .navbar {
@@ -16,7 +15,7 @@
 }
 
 .home-page .v-container {
-    padding-top: 7.5rem;
+    padding-top: 5rem;
     max-width: 1080px;
 }
 
@@ -27,7 +26,7 @@
     padding: 4px;
     line-height: 4.5rem;
     display: block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .home-page .headline-name {
@@ -54,7 +53,7 @@
     bottom: 1rem;
     left: calc(50vw - 1.25rem);
     font-size: 2.5rem;
-    opacity: 40%;
+    opacity: 30%;
     -webkit-animation: chevron-down 3s infinite ease-in-out;
     -o-animation: chevron-down 3s infinite ease-in-out;
     -ms-animation: chevron-down 3s infinite ease-in-out; 
@@ -88,8 +87,12 @@
     font-family: Georgia, Times;
     font-size: 4rem;
     font-weight: 500;
-    padding-left: 1rem;
     padding: 0.5rem;
+}
+
+.home-page .projects-blurb {
+    padding-left: 10rem;
+    width: 30rem;
 }
 
 .home-page .v-project {

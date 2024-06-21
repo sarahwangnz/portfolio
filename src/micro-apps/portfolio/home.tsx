@@ -43,7 +43,7 @@ export class HomePage extends PureComponent {
   render = () => (
     <LayoutPage microApp={portfolioApp} pageName="home-page">
       <div className="v-container">
-        <Row className="v-page">
+        <div className="v-page" id="home">
           <Col id="home-title" sm={7}>
             <div className="text-box">
               <div className="headline-content">
@@ -61,9 +61,9 @@ export class HomePage extends PureComponent {
           </Col>
           <Col id="home-text" className="image-box" sm={5}>
           </Col>
-        </Row>
+        </div>
         <div className="v-page" id="projects">
-          <div className="v-projects-header">Projects</div>
+          <div className="v-projects-header">Curious? Explore my portfolio:</div>
           <Row>
             <Col sm={7}>
               <div id="wedding-whisk" className="v-project" onClick={this.goToProject}>

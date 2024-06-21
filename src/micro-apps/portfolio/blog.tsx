@@ -44,11 +44,11 @@ export class Blog extends PureComponent<any, { selected: string }> {
                                     <p className="v-about-summary">I began to self-teach myself the fundamentals of UX/UI design during the pandemic,
                                         and I’m still learning new things everyday! What I love most about design is how it can
                                         evoke feelings and communicate universal ideas to people in mere seconds.</p>
-                                    <p>More coming soon!</p>
+                                    <p>(More coming soon!)</p>
                                 </div>
                             </Col>
                             <Col sm="5" className="v-img-container">
-                                <img className="v-about-img" src="./resources/about.png" alt="Image of Sarah hiking with her dog" />
+                                <img className="v-about-img" src="./resources/for-blog.png" alt="Image of Sarah hiking with her dog" />
                             </Col>
                         </Row>
                         <div className="bottom-space">
